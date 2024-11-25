@@ -3,9 +3,9 @@ import { BiSupport } from "react-icons/bi";
 import { CiCircleCheck, CiTrophy } from "react-icons/ci";
 import { FaShippingFast } from "react-icons/fa";
 
-const FoorBanner = () => {
+const FootBanner = () => {
   return (
-    <div className="flex gap-10  justify-center bg-pink-50 p-10">
+    <div className="flex gap-10  justify-center bg-pink-50 p-10 mt-5">
       <div className="flex items-center gap-2">
         <CiTrophy size={40} />
         <div>
@@ -39,4 +39,4 @@ const FoorBanner = () => {
   );
 };
 
-export default FoorBanner;
+export default FootBanner;

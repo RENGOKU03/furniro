@@ -1,10 +1,14 @@
 import "./App.css";
-import FoorBanner from "./Components/FoorBanner";
+import FootBanner from "./Components/FootBanner";
+import Cart from "./Pages/Cart";
+import ProductPage from "./Pages/ProductPage";
+
+import Shop from "./Pages/Shop";
 
 function App() {
   return (
     <>
-      <FoorBanner />
+      <Cart />
     </>
   );
 }

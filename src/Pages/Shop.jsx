@@ -1,23 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Product from "../Components/Product";
-import FoorBanner from "../Components/FoorBanner";
+import FootBanner from "../Components/FootBanner";
+import Navigation from "../Components/Navigation";
+import Footer from "../Components/Footer";
 
 const Shop = () => {
+  const [data, setData] = useState([]);
+  async function fetchData() {
+    const response = await fetch("https://fakestoreapi.com/products");
+    const data = await response.json();
+    setData(data);
+  }
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
-    <div className="grid grid-cols-5 gap-4">
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <FoorBanner />
-    </div>
+    <>
+      <Navigation />
+      <div className="grid grid-cols-4 px-10 gap-4 mt-10">
+        {data &&
+          data.map((item) => {
+            return (
+              <div key={item.id}>
+                <Product item={item} />
+              </div>
+            );
+          })}
+      </div>
+      <FootBanner />
+      <Footer />
+    </>
   );
 };
 
