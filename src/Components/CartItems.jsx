@@ -1,23 +1,30 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const CartItems = () => {
+  const cart = useSelector((state) => state.cart.cart);
+  console.log(cart);
   return (
     <div className="flex gap-10 ">
       <div className="w-2/3 py-5">
-        <div className="grid grid-cols-4 gap-20 bg-pink-100  ml-auto px-10 ">
-          <span>Product</span>
-          <span>Price</span>
-          <span>Quantity</span>
-          <span>Subtotal</span>
+        <div className="flex  bg-pink-100  ml-auto px-10 ">
+          <p className="w-96">Product</p>
+          <p className="w-20">Price</p>
+          <p className="w-20"> Quantity</p>
+          <p className="w-20">Subtotal</p>
         </div>
-        <div className="grid grid-cols-4 gap-20  items-center  ml-auto px-10 py-5">
-          <div className="flex gap-2  overflow-hidden items-center">
-            <img src="./schoolbag.jpeg" className="w-1/3" alt="" />
-            <span>Asgaard Sofa</span>
-          </div>
-          <span> Rs. 24000</span>
-          <span>1</span>
-          <span>Rs. 24000</span>
+        <div className="flex ml-auto px-10 py-5">
+          {cart.map((item) => (
+            <>
+              <div className="flex gap-2 w-96 overflow-hidden items-center">
+                <img src={item.image} className="w-1/3" alt="" />
+                <span>{item.title}</span>
+              </div>
+              <p className="w-20">{item.price}</p>
+              <p className="w-20">1</p>
+              <p className="w-20">Rs. 24000</p>
+            </>
+          ))}
         </div>
         <hr />
       </div>

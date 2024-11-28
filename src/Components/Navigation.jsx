@@ -20,12 +20,7 @@ const Navigation = () => {
             <div className="bg-pink-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
           </span>
         </Link>
-        <Link to={"/aboutus"}>
-          <span className="cursor-pointer hover:scale-110 group">
-            About
-            <div className="bg-pink-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
-          </span>
-        </Link>
+
         <Link to={"/contactus"}>
           <span className="cursor-pointer hover:scale-110 group">
             Contact
@@ -38,7 +33,12 @@ const Navigation = () => {
         <CgProfile size={30} className="cursor-pointer hover:scale-110" />
         <CiSearch size={30} className="cursor-pointer hover:scale-110" />
         <CiHeart size={30} className="cursor-pointer hover:scale-110" />
-        <CiShoppingCart size={30} className="cursor-pointer hover:scale-110" />
+        <Link to={"/cart"}>
+          <CiShoppingCart
+            size={30}
+            className="cursor-pointer hover:scale-110"
+          />
+        </Link>
       </div>
     </div>
   );
