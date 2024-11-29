@@ -1,14 +1,17 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../Store/Slice";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../Store/Slice";
 
 const Description = ({ product }) => {
   // console.log(product);
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
-    console.log(product, "clickedddddd");
+    if (cart.some((item) => item.id === product.id)) {
+      dispatch(removeFromCart(product.id));
+    } else {
+      dispatch(addToCart(product));
+    }
   };
   return (
     <div className="flex gap-10 h-[70vh] mt-10">
@@ -27,7 +30,9 @@ const Description = ({ product }) => {
           className="hover:bg-[#ffafaf] border-2 border-black hover:border-[#ffafaf] text-black px-5 w-52 py-2 rounded-lg"
           onClick={() => handleAddToCart(product)}
         >
-          Add to Cart
+          {cart.some((item) => item.id === product.id)
+            ? "Remove from Cart"
+            : "Add to Cart"}
         </button>
       </div>
     </div>
