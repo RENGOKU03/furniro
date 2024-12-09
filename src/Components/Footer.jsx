@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="grid grid-cols-2 border-t-2 border-[#6e6d6d] mt-10 bg-pink-50">
+      <div className="grid md:grid-cols-2 border-t-2 justify-center items-center border-[#6e6d6d] mt-10 bg-pink-50">
         <div className="flex gap-5 flex-col justify-center items-start pl-20 pt-5">
           <span className="font-bold text-xl">Furniro.</span>
           <span>400, university Drive Suite 200 coral Gables. Fl32114 USA</span>

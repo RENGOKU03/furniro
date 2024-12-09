@@ -5,7 +5,7 @@ import { FaShippingFast } from "react-icons/fa";
 
 const FootBanner = () => {
   return (
-    <div className="flex gap-10  justify-center bg-pink-50 p-10 mt-5">
+    <div className="grid space-y-3 sm:grid-cols-2 md:grid-cols-4 justify-center bg-pink-50 p-10 mt-5">
       <div className="flex items-center gap-2">
         <CiTrophy size={40} />
         <div>
