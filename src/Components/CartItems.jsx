@@ -34,7 +34,9 @@ const CartItems = () => {
                   handleDeleteFromCart(item.id);
                 }}
               >
-                <MdDeleteOutline size={40} color="red" />
+                <div className="cursor-pointer">
+                  <MdDeleteOutline size={40} color="red" />
+                </div>
               </p>
             </div>
           </>
