@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
 import { CiHeart, CiSearch, CiShoppingCart } from "react-icons/ci";
+import Login from "./Login.jsx";
 
 const NavMobile = ({ cart }) => {
   return (
@@ -23,7 +23,7 @@ const NavMobile = ({ cart }) => {
       </div>
 
       <div className="items-center justify-center gap-4 flex bg-pink-50 py-2 relative">
-        <CgProfile size={30} className="cursor-pointer hover:scale-110" />
+        <Login />
         <CiSearch size={30} className="cursor-pointer hover:scale-110" />
         <CiHeart size={30} className="cursor-pointer hover:scale-110" />
         <Link to={"/cart"}>

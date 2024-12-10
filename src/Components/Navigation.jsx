@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineCancel } from "react-icons/md";
 import NavMobile from "./NavMobile.jsx";
-import { CgProfile } from "react-icons/cg";
 import { CiHeart, CiSearch, CiShoppingCart } from "react-icons/ci";
 import { useSelector } from "react-redux";
+import Login from "./Login.jsx";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +43,7 @@ const Navigation = () => {
         </div>
 
         <div className="items-center gap-4 hidden md:flex ">
-          <CgProfile size={30} className="cursor-pointer hover:scale-110" />
+          <Login />
           <CiSearch size={30} className="cursor-pointer hover:scale-110" />
           <CiHeart size={30} className="cursor-pointer hover:scale-110" />
           <Link to={"/cart"}>

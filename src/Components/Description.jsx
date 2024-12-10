@@ -27,7 +27,7 @@ const Description = ({ product }) => {
         </p>
         <p className="text-[#6e6d6d]">{product?.description}</p>
         <button
-          className="hover:bg-[#ffafaf] border-2 border-black hover:border-[#ffafaf] text-black px-5 w-52 py-2 mx-auto rounded-lg"
+          className="hover:bg-[#ffafaf] border-2 border-black hover:border-[#ffafaf] text-black px-5 w-52 py-2  rounded-lg"
           onClick={() => handleAddToCart(product)}
         >
           {cart.some((item) => item.id === product.id)

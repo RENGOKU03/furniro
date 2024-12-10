@@ -20,7 +20,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <p className="text-[#686767] pl-20 pt-5 pb-4 border-t-2 border-[#6e6d6d] bg-yellow-50">
+      <p className="text-[#686767] pl-20 py-2 border-t-2 border-[#6e6d6d] bg-yellow-50">
         2024 Furniro. All Rights Reserved
       </p>
     </>
